@@ -263,6 +263,11 @@ body {
     justify-content: space-between;
 }
 
+.filter-block__left {
+    display: flex;
+    align-items: center;
+}
+
 .filter-block__label {
     font-size: 15px;
     font-weight: 300;
@@ -270,11 +275,12 @@ body {
 }
 
 .filter-block__item{
+    background-color: #f9f9f9;
     outline:none;
     text-align: center;
     height: 44px;
     font-size: 15px;
-    padding: 0 62px 0 16px;
+    padding: 0 38px 0 16px;
     border: none;
     border-radius: 5px;
     margin-left: 21px;
