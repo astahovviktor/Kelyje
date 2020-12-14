@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kelyje</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__left">
+                    <div class="logo header__logo">
+                        <img src="./header-image/photo-camera-lines-variant.svg" alt="" class="logo__image">
+                        <div class="logo__title">
+                            Kelyje
+                        </div>
+                    </div>
+                    <nav class="menu menu__header">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Apie mus</a>
+                            </li>
+                            <li class="menu__item menu__item--active">
+                                <a href="#" class="menu__link menu__link--active">Informacija lankytojams</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Susisiekite su mumis</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__right">
+                    <div class="user__foto">
+                        <img src="./img/maiia__user.png" alt="" class="user__foto-image">
+                    </div>
+                    <div class="user user__info">
+                        <div class="user__name">Stevenas Pauliu...</div>
+                        <div class="user__status">Paprastas</div>
+                    </div>
+                    <div class="user__balance">
+                        <div class="user__balance-field">
+                            <label class="user__balance-title">Balansas</label>
+                            <div class="user__balance-money">100 taškų</div>
+                        </div>
+                        <div class="user__balance-donat">
+                            <a href="#" class="donate donate__btn">Pildyti</a>
+                        </div>
+                    </div>
+                    <div class="user__split">
+                        <button class="user__split-btn">Įkelti vaizdo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="search-content">
+        <div class="container container-body">
+            <div class="head-block">
+                <div class="head-block__breadcrumbs">
+                    <a href="#" class="head-block__crumbs head-block__crumbs-active ">Namai</a>
+                    <span class="head-block__symbol"> / </span>
+                    <a href="" class="head-block__crumbs">Teisinis Automobilių Taškų</a>
+                </div>
+                <div class="head-block__title">
+                    Teisinis Automobilių Taškų
+                </div>
+                <div class="head-block__search-block">
+                    <div class="head-block__search-info">
+                        <p class="search-info__text">
+                            Keyword
+                            <span class="text-info">"Coca-cola"</span>, show
+                            <span class="text-info">1-9</span>  from
+                            <span class="text-info">26</span>  results
+                        </p>
+                    </div>
+                    <div class="head-block__search-btn">
+                        <button class="head_block__btn">
+                            <img class="btn-img" src="./img/magnifying-glass.png">ieškoti vėl
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="search-block">
+                <div class="search-block__search-panel">
+                    <div class="search-input panel--date">
+                        <label class="search-input__label">Date</label>
+                        <div class="date-picker date-picker--inputs">
+                            <input type="date" class="search-input__item date-input" id="startTimestamp">
+                            <input type="date" class="search-input__item date-input" id="endtTimestamp">
+                        </div>
+                    </div>
+                    <div class="search-input panel--item">
+                        <label for="car-number" class="search-input__label">Car number</label>
+                        <input type="text" class="search-input__item item__car-numb" id="car-number">
+                    </div>
+                    <div class="search-input panel--item">
+                        <label for="status" class="search-input__label">Statusas</label>
+                        <select class="search-input__item" id="status">dfdsf</select>
+                    </div>
+                    <div class="search-input panel--item">
+                        <label for="format" class="search-input__label">Formatas</label>
+                        <select class="search-input__item" id="format">dsfdsf</select>
+                    </div>
+                    <button class="accept-btn accept-btn__active">Atstatyti</button>
+                </div>
+            </div>
+            <div class="filter-block">
+                <div class="filter-block__left">
+                    <label for="select-filter" class="filter-block__label">Rūšiuoti pagal:</label>
+                    <select class="filter-block__item" id="select-filter">
+                        <option value="filter">Laikas: nuo mažiausios</option>
+                    </select>
+                </div>
+                <div class="filter-block__right">
+                    <div class="filter-block__btn">
+                        <button class="btn__tabs">
+                            <img src="./img/sort2cubs.png" alt="" class="btn__2tabs-img">
+                        </button>
+                        <button class="btn__tabs btn-tabs--active">
+                            <img src="./img/sort4cubs.png" alt="" class="btn__4tabs-img">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card-content">
+        <div class="container container-body">
+            <div class="card-items">
+                <div class="card-items__block">
+                    <div class="card-item">
+                        <div class="card-item__title"><p>Vairuotojas neteisingai stovi kieme</p></div>
+                        <div class="card-item__date">
+                        <div class="item-id"><p>AC-2563</p></div>
+                        <div class="item-date"><p>2016/12/31</p></div>
+                        <div class="item-time"><p>14:28</p></div>
+                    </div>
+                        <div class="card-item__img-info">
+                        <img src="./img/photo-video-font.png" alt="" class="photo-video-font">
+                        <div class="photo-video__img">
+                            <div class="video-photo-icon">
+                                <img src="./img/video-camera.png">
+                            </div>
+                            <div class="video-photo-icon">
+                                <img src="./img/photo-camera.png">
+                            </div>
+                        </div>
+                        <div class="photo-video__card-id">
+                            <p>#2564</p>
+                        </div>
+                        <div class="photo-video__card-info">
+                            <div class="photo-video__police-info">
+                                <p>Prieš policijos perkėlimas:</p>
+                            </div>
+                            <div class="police_info">
+                                <p>Siųsti policijai</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="card-item__location">
+                        <div class="card-item__location-area">
+                            <img class="card-item__location-pin" src="./img/location-pin.png">
+                            <p class="card-item__location-adress">S. Stanevičiau gatvė 21, Vilnius, Lietuva</p>
+                        </div>
+                            <p class="location-area__geo-pos">41°24'12.2"N 2°10'26</p>
+                    </div>
+                    </div>
+                    <div class="card-item--ticket-buy">
+                        <div class="card-item__ticket">
+                        <div class="card-item__price">
+                            <p>10 taškų</p>
+                        </div>
+                        <button class="card-item__buy-btn">Buy Single Ticket</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-items__block">
+                    <div class="card-item">
+                        <div class="card-item__title"><p>Kauno meras V. Matijošaitis automobiliu pateko</p></div>
+                        <div class="card-item__date">
+                            <div class="item-id"><p>AC-2563</p></div>
+                            <div class="item-date"><p>2016/12/31</p></div>
+                            <div class="item-time"><p>14:28</p></div>
+                        </div>
+                        <div class="card-item__img-info">
+                            <img src="./img/registrator.png" alt="" class="photo-video-font">
+                            <div class="photo-video__img">
+                                <div class="video-photo-icon">
+                                    <img src="./img/photo-camera.png">
+                                </div>
+                            </div>
+                            <div class="photo-video__card-id">
+                                <p>#2565</p>
+                            </div>
+                            <div class="photo-video__card-info">
+                                <div class="photo-video__police-info">
+                                    <p>Prieš policijos perkėlimas:</p>
+                                </div>
+                                <div class="police_info">
+                                    <p>22d 11:28:33</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item__location">
+                            <div class="card-item__location-area">
+                                <img class="card-item__location-pin" src="./img/location-pin.png">
+                                <p class="card-item__location-adress">S. Stanevičiau gatvė 21, Vilnius, Lietuva</p>
+                            </div>
+                            <p class="location-area__geo-pos">41°24'12.2"N 2°10'26</p>
+                        </div>
+                    </div>
+                    <div class="card-item--ticket-buy">
+                        <div class="card-item__ticket">
+                            <div class="card-item__price">
+                                <p>10 taškų</p>
+                            </div>
+                            <button class="card-item__buy-btn">Buy Single Ticket</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-items__block">
+                    <div class="card-item">
+                        <div class="card-item__title"><p>Vairuotojas neteisingai</p></div>
+                        <div class="card-item__date">
+                            <div class="item-id"><p>AC-2563</p></div>
+                            <div class="item-date"><p>2016/12/31</p></div>
+                            <div class="item-time"><p>14:28</p></div>
+                        </div>
+                        <div class="card-item__img-info">
+                            <img src="./img/crossline.png" alt="" class="photo-video-font">
+                            <div class="photo-video__img">
+                                <div class="video-photo-icon">
+                                    <img src="./img/video-camera.png">
+                                </div>
+                            </div>
+                            <div class="photo-video__card-id">
+                                <p>#2567</p>
+                            </div>
+                            <div class="photo-video__card-info">
+                                <div class="photo-video__police-info">
+                                    <p>Prieš policijos perkėlimas:</p>
+                                </div>
+                                <div class="police_info">
+                                    <p>Parduodami</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item__location">
+                            <div class="card-item__location-area">
+                                <img class="card-item__location-pin" src="./img/location-pin.png">
+                                <p class="card-item__location-adress">S. Stanevičiau gatvė 21, Vilnius, Lietuva</p>
+                            </div>
+                            <p class="location-area__geo-pos">41°24'12.2"N 2°10'26</p>
+                        </div>
+                    </div>
+                    <div class="card-item--ticket-buy">
+                        <div class="card-item__ticket">
+                            <div class="card-item__price">
+                                <p>10 taškų</p>
+                            </div>
+                            <button class="card-item__buy-btn">Buy Single Ticket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="pages">
+                <div class="pages__select-items">
+                    <a href="#" class="select__item">1</a>
+                    <a href="#" class="select__item select__item-active">2</a>
+                    <a href="#" class="select__item">3</a>
+                    <a href="#" class="select__item">4</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="copyright">
+                    <p>© How I Drive, 2016</p>
+                </div>
+                <div class="footer__info">
+                    <a href="#" class="footer__info-item">about us</a>
+                    <a href="#" class="footer__info-item info-item--active">information for visitors</a>
+                    <a href="#" class="footer__info-item">contact</a>
+                </div>
+                <div class="development">
+                    <p>Design and Development by
+                        <a href="#" class="OTAKOYI">OTAKOYI</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
