@@ -326,6 +326,7 @@ body {
     margin: 0;
 }
 .card-item {
+    border-radius: 5px 5px;
     padding: 0 23px;
     background-color: #fff;
 }
@@ -446,6 +447,7 @@ body {
 
 
 .card-item--ticket-buy {
+    border-radius: 0 0 5px 5px;
     padding: 0 23px;
     background-color: #f2f5f7;
     border-top: 1px solid black;
