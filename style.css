@@ -7,11 +7,14 @@ body {
 }
 .header {
     background-color: #092232;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
     box-shadow: 0px -3px 40px 0px rgba(19, 36, 47, 0.7);
 }
 .search-content, .pages {
     background-color: #f2f5f7;
-    padding: 39px 0 0 0;
+    padding: 109px 0 0 0;
 }
 .container {
     width: auto;
@@ -37,6 +40,9 @@ body {
     color: white;
     line-height: 30px;
 }
+.header__burger {
+    display: none;
+}
 .menu__list {
     display: flex;
     padding: 0;
@@ -46,14 +52,23 @@ body {
     margin-left: 30px;
     list-style: none;
 }
-.menu__item--active {
-    border-bottom: 3px solid #fff;
+.menu__item--active span {
+    background-color: #fff;
+    position: absolute;
+    width: 181px;
+    height: 3px;
+    bottom: 0;
+    left: 234px;
+
 }
 .menu__link {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 13px;
     color: #c0cfd2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .menu__link--active {
     color: white;
@@ -79,11 +94,22 @@ body {
 .user__name{
     color: white;
     font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .user__status {
-    font-size: 11px;
+    margin-top: 7px;
+    display: flex;
+    font-size: 12px;
     text-transform: uppercase;
     font-weight: 300;
+}
+.dnt__btn-inf {
+    text-transform: none;
+    font-weight: 500;
+    margin-left: 15px;
 }
 .user__balance {
     display: flex;
@@ -96,8 +122,13 @@ body {
     font-weight: 300;
 }
 .user__balance-money {
+    margin-top: 7px;
     font-size: 15px;
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .user__balance-donat {
     align-self: flex-end;
@@ -107,6 +138,7 @@ body {
     font-size: 12px;
     text-decoration: none;
     border-bottom: 2px solid #3cbcd4;
+    font-weight: 500;
 }
 .user__split{
     margin-left: 43px
@@ -247,8 +279,6 @@ body {
     text-transform: uppercase;
     background-color: #fff;
     box-shadow: 0px 3px 10px 0px rgba(19, 36, 47, 0.1);
-
-
 }
 
 .date-input {
@@ -320,17 +350,18 @@ body {
 .card-items {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .card-items__block {
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 30px);
     border-radius: 5px;
-    margin-right: 28px;
     box-shadow: 0px 2px 5px 0px rgba(19, 36, 47, 0.2);
+    margin: 0 15px 30px;
 }
-.card-items__block:last-child {
-    margin: 0;
-}
+
 .card-item {
     border-radius: 5px 5px;
     padding: 0 23px;
@@ -368,6 +399,10 @@ body {
     position: relative;
 }
 
+.photo-video-font {
+    width: 100%;
+}
+
 .photo-video__img{
     position: absolute;
     top: 16px;
@@ -401,7 +436,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
 }
-
 
 .photo-video__police-info {
     width: 89px;
@@ -443,6 +477,8 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: 500;
     color: #092332;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .location-area__geo-pos {
@@ -542,22 +578,201 @@ body {
     color: #c0cfd2;
 }
 .development {
+    display: flex;
+}
+
+.development__info {
     font-size: 14px;
     color: #fff;
     font-weight: 300;
 }
-
+.development__info-by {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    margin-left: 4px;
+}
 .OTAKOYI {
     text-decoration: none;
     border-bottom: 2px solid #3cbcd4;
     font-weight: 500;
     color: #b9cace;
+    margin-left: 4px;
 
 }
 
 
+@media (max-width: 970px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+    }
+    .container {
+        padding: 0 33px ;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+        border: 2px solid #398a9a;
+        margin-right: 20px;
+    }
 
+    .header__burger span {
+        background-color: #fff;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        bottom: 19px;
+        right: 10px;
+    }
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        right: 10px;
+    }
 
+    .header__burger:before {
+        top: 13px;
+    }
+    .header__burger:after {
+        bottom: 13px;
+    }
+    .menu__header {
+        display: none;
+    }
+    .logo__title {
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+    }
+    .logo__title:before {
+        content: 'Karas - ';
+    }
+
+    .footer--container {
+        padding: 0;
+    }
+    .card-items__block {
+        width: calc(50% - 30px);
+        margin: 0 15px 30px;
+    }
+    .footer__content {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .copyright {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        padding: 23px 0 21px;
+        border-top: 1px solid #384751;
+    }
+    .footer__info {
+        display: flex;
+        text-align: center;
+        order: 1;
+        flex-direction: column;
+        margin-left: 0;
+        padding-top: 25px;
+    }
+    .footer__info-item {
+        padding:0 0 20px 0;
+    }
+    .development {
+        order: 3;
+        justify-content: center;
+        width: 100%;
+        padding: 21px 0 16px;
+        border-top: 1px solid #384751;
+    }
+    .development__info-by {
+        font-weight: 500;
+        color: #b9cace;
+    }
+
+    .development__info {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+    }
+    .container {
+        padding: 0 15px ;
+    }
+    .header__left {
+        width: 100%;
+        padding: 14px 0;
+        justify-content: space-between;
+    }
+    .header__burger {
+        order: 2;
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+        border: 2px solid #398a9a;
+        margin: 0;
+    }
+
+    .header__burger span {
+        background-color: #fff;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        bottom: 19px;
+        right: 10px;
+    }
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        right: 10px;
+    }
+
+    .header__burger:before {
+        top: 13px;
+    }
+    .header__burger:after {
+        bottom: 13px;
+    }
+    .header__logo {
+        order: 1;
+    }
+    .menu__header {
+        display: none;
+    }
+    .header__right {
+        display: none;
+    }
+    .card-item {
+        padding: 0 15px;
+    }
+    .card-item--ticket-buy {
+        padding: 0 15px;
+    }
+}
 
 
 
