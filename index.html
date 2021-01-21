@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./script.js"></script>
     <title>Kelyje</title>
 </head>
 <body>
@@ -104,25 +105,30 @@
                 </div>
             </div>
             <div class="search-block">
-                <div class="search-block__search-panel">
+                <div class="search-block__filter-label">
+                    <p>Filter</p>
+                </div>
+                <button onclick="myFunction()" class="search-block__filter-button"></button>
+                <div id="myDropdown" class="search-block__search-panel">
                     <div class="search-input panel--date">
                         <label class="search-input__label">Date</label>
                         <div class="date-picker date-picker--inputs">
                             <input type="date" class="search-input__item date-input" id="startTimestamp">
+                            <img src="./img/long-arrow-pointing-to-the-right.png" alt="" class="arrow">
                             <input type="date" class="search-input__item date-input" id="endtTimestamp">
                         </div>
                     </div>
                     <div class="search-input panel--item">
                         <label for="car-number" class="search-input__label">Car number</label>
-                        <input type="text" class="search-input__item item__car-numb" id="car-number">
+                        <input type="text" class="search-input__item item__car-numb" id="car-number" placeholder="e.g. ab-6785">
                     </div>
                     <div class="search-input panel--item">
                         <label for="status" class="search-input__label">Statusas</label>
-                        <select class="search-input__item" id="status">dfdsf</select>
+                        <select class="search-input__item" id="status"></select>
                     </div>
                     <div class="search-input panel--item">
                         <label for="format" class="search-input__label">Formatas</label>
-                        <select class="search-input__item" id="format">dsfdsf</select>
+                        <select class="search-input__item" id="format"></select>
                     </div>
                     <button class="accept-btn accept-btn__active">Atstatyti</button>
                 </div>
