@@ -293,6 +293,12 @@ placeholder {
     padding-left: 20px;
 
 }
+button,
+button:active,
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
 
 .accept-btn {
     flex: 0 1 15%;
@@ -409,7 +415,12 @@ placeholder {
 .card-item__date {
     display: flex;
     padding-bottom: 21px;
+    justify-content: space-between;
 }
+.card-item__date-info {
+    display: flex;
+}
+
 .item-date,
 .item-time {
     font-size: 14px;
@@ -811,13 +822,11 @@ placeholder {
     .search-block {
         position: relative;
         padding: 16px 0;
-        display: flex;
         justify-content: space-between;
     }
 
     .search-block__search-panel {
         display: none;
-        position: absolute;
         width: auto;
         overflow: auto;
         z-index: 1;
@@ -825,9 +834,12 @@ placeholder {
         top: 80px;
     }
     .search-block__filter-label {
-        display: block;
+        display: flex;
         font-size: 20px;
         margin-left: 20px;
+    }
+    .search-block__filter-label > p {
+        flex-grow: 1;
     }
     .search-block__filter-button {
         position: relative;
